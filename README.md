@@ -1,5 +1,7 @@
 **Ecoro** it's implementation pseudo-coroutines like [Lua-coroutines](http://www.lua.org/pil/9.1.html) for Erlang.
 
+[![Build Status](https://api.travis-ci.org/BlackMATov/ecoro.erl.svg?branch=master)](https://travis-ci.org/BlackMATov/ecoro.erl)
+
 # Examples
 
 ## Simple ##
