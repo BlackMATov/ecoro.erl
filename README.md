@@ -2,14 +2,13 @@
 
 > Pseudo-coroutines library like [Lua-coroutines](http://www.lua.org/pil/9.1.html) for Erlang.
 
-[![Build Status](https://travis-ci.org/BlackMATov/ecoro.erl.svg?branch=master)](https://travis-ci.org/BlackMATov/ecoro.erl)
+[![Build Status](https://travis-ci.org/BlackMATov/ecoro.erl.svg?branch=main)](https://travis-ci.org/BlackMATov/ecoro.erl)
 
 # Examples
 
 ## Simple ##
 
-~~~erlang
-
+```erlang
 %% create coroutine
 Coro = ecoro:start(fun(State0) ->
   io:format("~p~n", [State0]),
@@ -28,13 +27,11 @@ end),
 
 %% resume coroutine (print 2 and return false because coro is ended)
 {false, _State3 = 3} = ecoro:resume(Coro, State2).
-
-~~~
+```
 
 ## Error handling ##
 
-~~~erlang
-
+```erlang
 %% create bad coroutine
 Coro = ecoro:start(fun() ->
   io:format("1~n"),
@@ -47,5 +44,4 @@ end),
 
 %% resume coroutine (return error with throw reason)
 {error, {throw, some_throw_reason}} = ecoro:resume(Coro).
-
-~~~
+```
